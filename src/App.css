@@ -1,0 +1,29 @@
+* {
+  margin: 0%;
+}
+
+.app-container {
+  width: 100svw;
+  height: 100svh;
+}
+
+.header {
+  font-size: 180px;
+  letter-spacing: 10px;
+  color: #092f4e;
+  display: flex;
+  align-items: center;
+}
+
+p {
+  width: 70%;
+  font-size: 30px;
+  font-weight: 700;
+  color: #092f4e;
+  align-items: flex-start;
+}
+
+.content-container {
+  margin: 150px 50px 30px 100px;
+  align-items: center;
+}
