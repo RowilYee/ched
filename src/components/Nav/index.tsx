@@ -1,6 +1,7 @@
 import './Nav.css'
 import chedLogo from '../../assets/ched-logo.png'
 import Hamburger from 'hamburger-react'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
     return (
@@ -11,11 +12,11 @@ const Nav = () => {
                     <input type="text" className="search-bar" />
                 </div>
                 <ul className='link-container'>
-                    <li className="links"><a>Home</a></li>
-                    <li className="links"><a>Programs</a></li>
-                    <li className="links"><a>Sign In</a></li>
-                    <li className="links"><a>Sign Up</a></li>
-                    <Hamburger size={120} />
+                    <li className="list"><Link className="links" to={"/"}>Home</Link></li>
+                    <li className="list"><Link className="links" to={"/"}>Programs</Link></li>
+                    <li className="list"><Link className="links" to={"/sign-in"}>Sign In</Link></li>
+                    <li className="list"><Link className="links" to={"/"}>Sign Up</Link></li>
+                    <Hamburger />
                 </ul>
 
             </nav>

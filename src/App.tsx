@@ -1,6 +1,10 @@
 import Nav from './components/Nav'
 import './App.css'
-import chedLogo from './assets/ched-logo.png'
+import Home from './components/Home'
+import SignIn from './components/SignIn'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 
 
 function App() {
@@ -8,15 +12,14 @@ function App() {
 
   return (
     <>
-      <div className="app-container">
-        <Nav />
-        <div className="content-container">
-          <h1 className='header'>BIENVENIDOS!</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis sit provident ea, dicta eum odio laborum magnam qui sapiente, incidunt quo sequi possimus, delectus accusantium nemo et amet. Fuga, sint?</p>
-        </div>
-        <img className="logo" src={chedLogo} />
 
-      </div>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sign-in" element={<SignIn />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
